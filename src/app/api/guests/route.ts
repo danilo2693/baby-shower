@@ -1,4 +1,5 @@
 export const dynamic = 'force-static';
+import { GuestType } from '@/app/types';
 import FIREBASE_CONFIG from '@/lib/firebase-config';
 import {
   collection,
@@ -14,7 +15,9 @@ export async function GET() {
   const postsRef = query(collection(db, 'guests'), orderBy('names'));
 
   const postsSnapshot = await getDocs(postsRef);
-  const guests = postsSnapshot.docs.map((doc) => ({
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const guests: GuestType[] = postsSnapshot.docs.map((doc: any) => ({
     ...doc.data(),
     id: doc.id
   }));

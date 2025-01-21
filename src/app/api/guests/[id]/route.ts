@@ -1,4 +1,5 @@
 export const dynamic = 'force-static';
+import { GuestType } from '@/app/types';
 import FIREBASE_CONFIG from '@/lib/firebase-config';
 import {
   getFirestore,
@@ -8,10 +9,14 @@ import {
   where,
   documentId
 } from 'firebase/firestore';
+import { NextRequest } from 'next/server';
 
 const db = getFirestore(FIREBASE_CONFIG);
 
-export async function GET(request, { params }) {
+export async function GET(
+  _: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
   const { id } = await params;
 
   const postsRef = query(
@@ -20,7 +25,8 @@ export async function GET(request, { params }) {
   );
 
   const postsSnapshot = await getDocs(postsRef);
-  const guests = postsSnapshot.docs.map((doc) => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const guests: GuestType[] = postsSnapshot.docs.map((doc: any) => ({
     ...doc.data(),
     id: doc.id
   }));
