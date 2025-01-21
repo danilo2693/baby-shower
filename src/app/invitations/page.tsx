@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import Link from 'next/link';
 import { CiLink } from 'react-icons/ci';
 import { Clipboard } from '../components/Clipboard';
