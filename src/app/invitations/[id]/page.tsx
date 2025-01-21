@@ -6,7 +6,7 @@ import { StartWithConfeti } from '@/app/components/StartWithConfeti';
 import { CiGift, CiLocationOn } from 'react-icons/ci';
 import { FaWhatsapp } from 'react-icons/fa';
 
-export default async function InvitationById({ params }) {
+export default async function InvitationById({ params }: {params: Promise<{ id: string }>}) {
   const { id } = await params;
   const guestData = await fetch(
     `${process.env.NEXT_PUBLIC_HOST}/api/guests/${id}`

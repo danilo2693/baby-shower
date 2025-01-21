@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { CiLink } from 'react-icons/ci';
 import { Clipboard } from '../components/Clipboard';
+import { GuestType } from '../types';
 
 export default async function Invitation() {
   const data = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/guests`);
-  const guests = await data?.json();
+  const guests: GuestType[] = await data?.json();
 
   return (
     <main className="flex flex-col justify-center items-center h-screen p-20 sm:py-10 sm:p-4">

@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
+import { ButtonType } from '../types';
 
-export const Button = ({ children, text, url }) => {
+export const Button = ({ children, text, url }: ButtonType) => {
   const goTo = () => {
     window.open(url);
   };

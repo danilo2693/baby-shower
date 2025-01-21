@@ -1,6 +1,11 @@
 import React from 'react';
+import { GeneralDataType } from '../types';
 
-export const DateAndTime = ({ generalData }) => {
+export const DateAndTime = ({
+  generalData
+}: {
+  generalData: GeneralDataType;
+}) => {
   return (
     <span className="flex flex-col gap-1 items-center">
       <p className="text-persian-pink-400 pl-3">{generalData?.month}</p>
