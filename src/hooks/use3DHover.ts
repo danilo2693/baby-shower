@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 
 interface Use3DHoverReturn {
   transform: string;
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLDivElement | null>;
   handleMouseMove: (evt: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   handleMouseLeave: () => void;
 }
@@ -18,16 +18,17 @@ interface Use3DHoverReturn {
           onMouseLeave={handleMouseLeave}
         > */
 
-
 // const { transform, ref, handleMouseMove, handleMouseLeave } = use3DHover();
-
 
 const use3DHover = (): Use3DHoverReturn => {
   const ref = useRef<HTMLDivElement>(null);
   const [transform, setTransform] = useState<string>('');
-  const [dimensions, setDimensions] = useState<{ width: number; height: number }>({
+  const [dimensions, setDimensions] = useState<{
+    width: number;
+    height: number;
+  }>({
     width: 0,
-    height: 0,
+    height: 0
   });
 
   useEffect(() => {
