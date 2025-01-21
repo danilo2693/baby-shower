@@ -5,7 +5,7 @@ import { FaCopy } from 'react-icons/fa';
 export const Clipboard = ({ text }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(
-      `Hola, nos gustaria invitarte al Baby Shower de nuestra princesa Samantha, te dejó un enlace con más detalles: ${text}`
+      `Hola, nos gustaria invitarte al Baby Shower de nuestra princesa Samantha, te dejo un enlace con más detalles: ${text}`
     );
   };
   return (
