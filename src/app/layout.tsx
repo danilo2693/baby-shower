@@ -24,7 +24,7 @@ const dancing = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-  title: 'Baby shower',
+  title: 'Baby shower - Samantha',
   description: 'Baby shower in honor to Samantha'
 };
 
