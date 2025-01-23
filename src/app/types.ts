@@ -1,14 +1,27 @@
 import { ReactNode } from 'react';
 
-export type GuestType = {
+export type GuestResponseType = {
   id: string;
   names: string[];
+  isConfirmed: boolean;
 };
+
+export type GuestType = {
+  id: string;
+  names: string;
+  allNames: PersonType[];
+  isConfirmed: boolean;
+};
+
+export type PersonType = { name: string; type: string };
 
 export type ButtonType = {
   children: ReactNode;
   text: string;
   url: string;
+  id?: string;
+  showConfirm?: boolean;
+  maxDateToConfirm?: string;       
 };
 
 export type GeneralDataType = {
@@ -33,4 +46,4 @@ export type LottieType = {
   src: string;
   style?: React.CSSProperties;
   onClick?: () => void;
-}
+};

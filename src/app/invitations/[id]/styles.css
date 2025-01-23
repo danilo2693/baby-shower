@@ -1,0 +1,17 @@
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny) {
+  color: #c4bbbb !important;
+  border: 1px solid #c4bbbb !important;
+  background-color: white !important;
+}
+
+div:where(.swal2-container)
+  div:where(.swal2-actions):not(.swal2-loading)
+  :where(.swal2-deny):hover {
+  color: #c4bbbb !important;
+  background-color: rgb(249 242 242) !important;
+  background-image: none !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-close):hover {
+  color: #d95ba7 !important;
+}
