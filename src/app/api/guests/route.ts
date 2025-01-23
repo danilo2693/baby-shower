@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 import { GuestResponseType, GuestType, PersonType } from '@/app/types';
 import FIREBASE_CONFIG from '@/lib/firebase-config';
 import {
