@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    console.log('hola');
+    return [
+      {
+        source: '/((?!invitations).*)',
+        destination: '/invitations',
+        permanent: false
+      }
+    ];
+  }
 };
 
 export default nextConfig;
