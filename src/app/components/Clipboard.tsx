@@ -2,11 +2,11 @@
 import React from 'react';
 import { FaCopy } from 'react-icons/fa';
 
-export const Clipboard = ({ text }: { text: string }) => {
+export const Clipboard = ({ text, url }: { text: string; url: string }) => {
+  const custom_copy_message = text.replace('{{url}}', url);
+
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(
-      `Hola, nos gustaria invitarte al Baby Shower de nuestra princesa Samantha, te dejo un enlace con más detalles: ${text}`
-    );
+    navigator.clipboard.writeText(custom_copy_message);
   };
   return (
     <i onClick={copyToClipboard} className="cursor-pointer">

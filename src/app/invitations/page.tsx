@@ -17,6 +17,12 @@ export default async function Invitation() {
     totalUnconfirmed
   } = response;
 
+  const generalDataResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_HOST}/api/general-data`
+  );
+
+  const generalData = await generalDataResponse?.json();
+
   return (
     <main className="flex flex-col justify-center items-center h-screen p-20 sm:py-10 sm:p-4">
       <h1 className="font-cookie sm:text-6xl text-8xl text-persian-pink-600 mb-4">
@@ -103,7 +109,8 @@ export default async function Invitation() {
                 </td>
                 <td className="px-6 py-4">
                   <Clipboard
-                    text={`${process.env.NEXT_PUBLIC_HOST}/invitation/${item.id}`}
+                    text={generalData?.copy_message}
+                    url={`${process.env.NEXT_PUBLIC_HOST}/invitation/${item.id}`}
                   />
                 </td>
               </tr>
