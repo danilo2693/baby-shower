@@ -33,8 +33,8 @@ export default async function InvitationById({
 
   return (
     <>
-      <main className="flex flex-col justify-center items-center h-screen bg-persian-pink-50 py-[30rem] sm:py-0">
-        <section className="bg-white flex flex-col items-center p-4 sm:p-2 shadow-2xl relative rounded-xl pt-16 sm:pt-2 w-[50vw] sm:w-[90vw]">
+      <main className="flex flex-col justify-center items-center h-screen bg-persian-pink-50 py-[30rem] sm:py-0 text-gray-800">
+        <section className="bg-white flex flex-col items-center p-4 sm:p-2 shadow-2xl relative rounded-xl pt-16 sm:pt-2 w-[500px] sm:w-[90vw]">
           <div className="h-52 sm:h-16 w-52 sm:w-16 cursor-pointer absolute left-[-100px] sm:left-[-16px] top-[-100px] sm:top-[-36px]">
             <Lottie src={'/cloud.lottie'} />
           </div>
