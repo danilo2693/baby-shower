@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     console.log('hola');
     return [
       {
-        source: '/((?!invitations).*)',
+        source: '/',
         destination: '/invitations',
         permanent: false
       }
