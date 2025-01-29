@@ -111,7 +111,7 @@ export const Table = ({
               <td className="px-6 py-4">
                 <Clipboard
                   text={generalData?.copy_message}
-                  url={`${process.env.NEXT_PUBLIC_HOST}/invitation/${item.id}`}
+                  url={`${process.env.NEXT_PUBLIC_HOST}/invitations/${item.id}`}
                 />
               </td>
             </tr>
