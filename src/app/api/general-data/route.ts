@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 import FIREBASE_CONFIG from '@/lib/firebase-config';
 import { getFirestore, collection, query, getDocs } from 'firebase/firestore';
 

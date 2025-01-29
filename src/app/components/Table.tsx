@@ -21,10 +21,11 @@ export const Table = ({
   const showModalTable = () => {
     SWLibrary.fire({
       title: 'Escribe la contraseña',
-      input: 'text',
+      input: 'password',
       confirmButtonColor: '#d95ba7',
       cancelButtonColor: '#fcf3f9',
       confirmButtonText: 'Aceptar',
+      inputAttributes: { autocomplete: 'off' },
       allowOutsideClick: false,
       preConfirm: (password) => {
         if (password === `${process.env.NEXT_PUBLIC_TABLE_PASSWORD}`) {
