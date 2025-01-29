@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { GuestType } from '../types';
 import { Table } from '../components/Table';
 
