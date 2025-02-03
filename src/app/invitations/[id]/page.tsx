@@ -84,7 +84,7 @@ export default async function InvitationById({
             <i className="text-persian-pink-400">
               <CiGift />
             </i>
-            <p>{generalData?.gift_message}</p>
+            <p className="leading-3">{generalData?.gift_message}</p>
           </span>
           <span className="font-cookie sm:text-3xl text-5xl text-persian-pink-600">
             {generalData?.bye_text}
